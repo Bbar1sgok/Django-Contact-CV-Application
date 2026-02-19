@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  {% include 'includes/head.html' %} 
+  {% block style %}
+  <style>
+    .main-img {
+      width: 100%;
+      height: auto;
+      border-radius: 2%;
+    }
+
+    @media (min-width: 700px) {
+      .main-img {
+        width: 45rem;
+        height: 45rem;
+        object-fit: cover;
+      }
+    }
+  </style>
+
+  {% endblock %}
+
+  <body>
+    <!--================Header Menu Area =================-->
+    {% include 'includes/navbar.html' %}
+
+    <!--================Home Banner Area =================-->
+
+    {% block banner_area %} {% endblock %}
+
+    <!--================End Home Banner Area =================-->
+
+    {% block content %} {% endblock %}
+
+    <!--================Footer Area =================-->
+    {% include 'includes/footer.html' %}
+
+    <!--================End Footer Area =================-->
+
+    <!-- contact page -->
+    {% block extra_scripts %} {% endblock %}
+  </body>
+</html>
