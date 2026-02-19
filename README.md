@@ -83,9 +83,9 @@ Open in browser:
 
 http://127.0.0.1:8000/
 
-Admin panel:
+#Admin panel:
 
-http://127.0.0.1:8000/admin/
+##http://127.0.0.1:8000/admin/
 📧 Email Configuration (Required for Contact Form)
 
 To enable email sending, configure SMTP settings in settings.py:
