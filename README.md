@@ -1,67 +1,54 @@
-# 🚀 Django Contact & CV Application
+🚀 Django Contact & CV Application
 
-## A simple Django portfolio application that includes:
+A Django-based portfolio application that includes a contact form system and dynamic CV upload/download functionality via the admin panel.
 
-📩 Contact form system
-
-💾 Message storage
-
-⚙️ Admin panel management
-
-📄 CV upload & download system
-
-🔐 Environment-based configuration
-
-## 📌 Project Overview
-### 📩 Contact System
+📌 Features
+📩 Contact System
 
 Users can submit a contact form (name, email, subject, message)
 
-Messages are saved to the database
+Messages are stored in the database
 
-Messages can be managed via Django admin panel
+Messages are manageable via Django Admin
 
-Email sending is supported (SMTP configuration required)
+Email sending supported (SMTP configuration required)
 
-### 📄 CV Download System
+📄 CV Download System
 
-CV files are managed from the Django admin panel
+CV files are uploaded via Django Admin
 
-Uploaded CV files appear dynamically in the navbar
+Uploaded CV automatically appears in the navbar
 
 Users can download the active CV directly from the website
 
-## ⚠️ Important:
-To enable the CV download button:
+⚠️ To enable CV download:
 
 Go to /admin/
 
-Open the Document section
+Open Document
 
-Upload your CV file
+Upload your CV
 
 Save
 
-After uploading, the CV will appear in the navbar.
-
-### 🛠 Technologies Used
+🛠 Technologies
 
 Python
 
 Django 6.0.2
 
-SQLite (default database)
+SQLite (default)
 
 Pillow
 
-⚙️ How to Run Locally
-1️⃣ Clone the Repository
+⚙️ Installation (Run Locally)
+1️⃣ Clone Repository
 git clone <your-repository-url>
 cd <project-folder>
 2️⃣ Create Virtual Environment
 python -m venv venv
 
-Activate it:
+Activate:
 
 Windows
 
@@ -79,13 +66,12 @@ python manage.py createsuperuser
 6️⃣ Run Server
 python manage.py runserver
 
-Open:
+Open in browser:
 
 Main site → http://127.0.0.1:8000/
-
 Admin panel → http://127.0.0.1:8000/admin/
 
-### 📧 Email Configuration (Required for Contact Form)
+📧 Email Configuration (Required for Contact Form)
 
 To enable email sending, configure SMTP settings in settings.py:
 
@@ -97,11 +83,11 @@ EMAIL_HOST_USER = "your-email"
 EMAIL_HOST_PASSWORD = "your-email-password"
 DEFAULT_FROM_EMAIL = "your-email"
 
-⚠️ If not configured, messages will be saved to the database but emails will not be sent.
+If not configured, messages will be saved to the database but emails will not be sent.
 
-### 🔐 Environment Variables (Optional for Production)
+🔐 Environment Variables (Optional for Production)
 
-Example:
+Example configuration:
 
 SECRET_KEY=your-secret-key
 DEBUG=True
@@ -117,10 +103,14 @@ sqlparse==0.5.5
 tzdata==2025.3
 📝 Notes
 
-Default database is SQLite
+Default database: SQLite
 
 SECRET_KEY is not hardcoded
 
-CV must be uploaded from admin panel to enable download
+CV must be uploaded from admin panel to activate download
 
-Virtual environment folder is not included in the repository
+venv/ is excluded from repository
+
+👨‍💻 Author
+
+Barış
